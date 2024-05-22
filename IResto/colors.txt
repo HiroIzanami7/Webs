@@ -1,0 +1,8 @@
+:root{
+	--primary-color: #fdfdfd
+    --secondary-color: #877407;
+	--tertiary-color: #0d0d25;
+}
+.darktheme{
+	--primary-color:#212121;
+    --secondary-color:#00000;
