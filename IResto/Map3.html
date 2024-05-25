@@ -87,81 +87,148 @@
 </section>
     <div id="map"></div>
 	<br>
-    <div class="faq-row">
-        <button onclick="goToJollibee()"class="best-box">
-		<span class="Borderline"></span>
-		    <form>
-				<h4 class="h4-title">Jollibee</h4>
-				<p>xcvsvdxdsvsvdsvd</p>
-			</form>
-        </button>
-        <button onclick="goToBurgerKing()" class="faq-box">
-            <h4 class="h4-title">Burger King</h4>
-            <p>dswsdfsdssd</p>
-        </button>
-        <button onclick="goToCafeFilipino()" class="faq-box">
-            <h4 class="h4-title"></h4>
-            <p>sdvsvsvs</p>
-        </button>
-        <button onclick="goToCafeFilipino()" class="faq-box">
-            <h4 class="h4-title"></h4>
-            <p>sdvsvsvs</p>
-        </button>
-		<button onclick="goToCafeFilipino()" class="faq-box">
-            <h4 class="h4-title"></h4>
-            <p>sdvsvsvs</p>
-        </button>
-		<button onclick="goToCafeFilipino()" class="faq-box">
-            <h4 class="h4-title"></h4>
-            <p>sdvsvsvs</p>
-        </button>
-	</div>
-    <div class="dev-box"></div>
+  <div class="faq-row">
+    <button onclick="goToJollibee()"class="faq-box">
+      <h4 class="h4-title">Jollibe</h4>
+      <i class="fa-solid fa-map-pin"><a>Camarin</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>#8700</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>Closes</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+    <button onclick="goToBurgerKing()" class="faq-box">
+      <h4 class="h4-title">Burger King</h4>
+      <i class="fa-solid fa-map-pin"><a>Bayad Center, Camarin Road, 32-C Selya, SubdivisionCaloocan1400, Metro Manila</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>https://www.burgerking.com.ph//</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>Open 24 Hours</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+    <button onclick="goToChicMac()" class="faq-box">
+      <h4 class="h4-title">ChiMac Chicken & Beer - BGC Forbestown</h4>
+      <i class="fa-solid fa-map-pin"><a>Bellagio 2, Forbestown Rd, Taguig, Metro Manila</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>09060712485</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>Sun to Thur, 10:30 AM–2:30 AM - Fri to Sat, 10:30 AM–3 AM</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+    <button onclick="goToFrankies()" class="faq-box">
+      <h4 class="h4-title">Frankie's New York Buffalo Wings Crossroads BGC</h4>
+      <i class="fa-solid fa-map-pin"><a>Justicia Dr, Taguig, 1634 Metro Manila</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>http://frankiesnywings.com/menu/restaurant-menu</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>10 AM–3 AM</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+    <button onclick="goToBBQ()" class="faq-box">
+      <h4 class="h4-title">BBQ Chicken - BGC</h4>
+      <i class="fa-solid fa-map-pin"><a>UG, BGC Central C3, 7th Ave, Taguig, Metro Manila</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>https://www.burgerking.com.ph//</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>Opens at 11 AM, Closes at 10 PM</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+    <button onclick="goToJJANGDAK()" class="faq-box">
+      <h4 class="h4-title">JJANG-DAK Chicken & Beer BGC (짱닭포차)</h4>
+      <i class="fa-solid fa-map-pin"><a>Fort Palm, Taguig, Metro Manila</a></i>
+      <br>
+      <i class="fa-sharp fa-solid fa-phone"><a>09455072942</a></i>	
+      <br>
+      <i class="fa-solid fa-calendar-days"><a>Opens at 10 AM, Closes at 1 AM</a></i>
+      <br>
+      <i class="fa-solid fa-truck-fast"></i>
+    </button>
+</div>
+<div class="dev-box"></div>
 <script>
-	let map;
+let map;
 
 async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
+const { Map } = await google.maps.importLibrary("maps");
 
-  map = new Map(document.getElementById("map"), {
-    center: { lat: 14.748000145789378, lng: 121.03654439479352 },
-    zoom: 17,
-  });
+map = new Map(document.getElementById("map"), {
+center: { lat: 14.748000145789378, lng: 121.03654439479352 },
+zoom: 17,
+});
 
-  // Markers for Jollibee and Burger King
-  const jollibeeMarker = new google.maps.Marker({
-    position: { lat: 14.748000145789378, lng: 121.03654439479352 },
-    map: map,
-    label: "Jollibee",
-    title: "Jollibee",
-  });
+// Markers for Jollibee and Burger King
+const jollibeeMarker = new google.maps.Marker({
+position: { lat: 14.748000145789378, lng: 121.03654439479352 },
+map: map,
+label: "Jollibee",
+title: "Jollibee",
+});
 
-  const burgerKingMarker = new google.maps.Marker({
-    position: { lat: 14.747718265257848, lng: 121.03643391952046 },
-    map: map,
-    label: "Burger King",
-    title: "Burger King",
-  });
-  const CafeFilipino = new google.maps.Marker({
-    position: { lat: 14.749393028439963, lng:121.03377190428338 },
-    map: map,
-    label: "Cafe Filipino",
-    title: "Cafe Filipino",
-  });
+const burgerKingMarker = new google.maps.Marker({
+position: { lat: 14.747718265257848, lng: 121.03643391952046 },
+map: map,
+label: "Burger King",
+title: "Burger King",
+});
+
+const ChiMac = new google.maps.Marker({
+position: { lat: 14.552173578959808,  lng: 121.04404309512134 },
+map: map,
+label: "ChiMac Chicken & Beer - BGC Forbestown",
+title: "ChiMac Chicken & Beer - BGC Forbestown",
+});
+
+const Frankie = new google.maps.Marker({
+position: { lat: 14.55386364652277,  lng: 121.0512565951213 },
+map: map,
+label: "Frankie's New York Buffalo Wings Crossroads BGC",
+title: "Frankie's New York Buffalo Wings Crossroads BGC",
+});
+
+const BBQ = new google.maps.Marker({
+position: { lat: 14.551845948613133,  lng: 121.04886166628634 },
+map: map,
+label: "BBQ Chicken - BGC",
+title: "BBQ Chicken - BGC",
+});
+
+const JJANGDAK = new google.maps.Marker({
+position: { lat: 14.554375245992668, lng: 121.04399842395627 },
+map: map,
+label: "JJANG-DAK Chicken & Beer BGC (짱닭포차)",
+title: "JJANG-DAK Chicken & Beer BGC (짱닭포차)",
+});
 }
 
 // Function to navigate to Jollibee location
 function goToJollibee() {
-  map.panTo({ lat: 14.748000145789378, lng: 121.03654439479352 });
+map.panTo({ lat: 14.748000145789378, lng: 121.03654439479352 });
 }
 
 // Function to navigate to Burger King location
 function goToBurgerKing() {
-  map.panTo({ lat: 14.747718265257848, lng: 121.03643391952046 });
+map.panTo({ lat: 14.747718265257848, lng: 121.03643391952046 });
 }
 
-function goToCafeFilipino(){
-	map.panTo({lat:14.749393028439963, lng:121.03377190428338 });
+function goToChicMac(){
+map.panTo({ lat: 14.552173578959808,  lng: 121.04404309512134 });
+}
+
+function goToFrankies(){
+map.panTo({ lat: 14.55386364652277,  lng: 121.0512565951213 });
+}
+
+function goToBBQ(){
+map.panTo({ lat: 14.551845948613133,  lng: 121.04886166628634 });
+}
+
+function goToJJANGDAK(){
+map.panTo({ lat: 14.554375245992668, lng: 121.04399842395627 });
 }
 
 initMap();
